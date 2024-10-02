@@ -5,3 +5,25 @@
 .active {
     @apply text-violet-600 underline underline-offset-4;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    z-index: -1;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #dacaf4;
+    opacity: 10px;
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #dab5db;
+    opacity: 10px;
+    border-radius: 10px;
+}
