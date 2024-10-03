@@ -12,11 +12,6 @@ function Header() {
             <p className='mt-6 text-2xl leading-8 text-gray-600 sm:text-center'>
             Learn how to grow your business with our expert advice.
             </p>
-            
-            {/* <div className="flex flex-wrap justify-center">
-                <button className="px-8 py-3 m-2 text-lg font-semibold rounded bg-violet-600 text-gray-50">Get started</button>
-                <button className="px-8 py-3 m-2 text-lg border rounded text-gray-900 border-gray-300">Learn more</button>
-            </div> */}
         </div>
     </section>
     )

@@ -13,7 +13,7 @@ function Footer() {
 				<img
                     src={logo_m41k80}
                     width={160}
-                    height={200} 
+                    height={160} 
                     className="" />
 				</div>
 				

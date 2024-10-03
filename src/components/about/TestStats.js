@@ -55,7 +55,7 @@ const stats = [
                   <blockquote className="mt-8">
                     <div className="relative text-lg font-medium text-white md:flex-grow">
                       <svg
-                        className="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-indigo-400"
+                        className="top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-indigo-400"
                         fill="currentColor"
                         viewBox="0 0 32 32"
                         aria-hidden="true"
