@@ -1,70 +1,106 @@
 const posts = [
-    {
-      id: 1,
-      title: 'Boost your conversion rate',
+  {
+    title: 'Boost your conversion rate',
+    href: '#',
+    category: { name: 'Article', href: '#', color: 'bg-indigo-100 text-indigo-800' },
+    description:
+      'Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    author: {
+      name: 'Paul York',
       href: '#',
-      description:
-        'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-      date: 'Mar 16, 2020',
-      datetime: '2020-03-16',
-      category: { title: 'Marketing', href: '#' },
-      author: {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        href: '#',
-        imageUrl:
-          'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      },
+      imageUrl:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
-    // More posts...
-  ]
+    readingTime: '6 min',
+  },
+  {
+    title: 'How to use search engine optimization to drive sales',
+    href: '#',
+    category: { name: 'Video', href: '#', color: 'bg-pink-100 text-pink-800' },
+    description:
+      'Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.',
+    date: 'Mar 10, 2020',
+    datetime: '2020-03-10',
+    author: {
+      name: 'Dessie Ryan',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    readingTime: '4 min',
+  },
+  {
+    title: 'Improve your customer experience',
+    href: '#',
+    category: { name: 'Case Study', href: '#', color: 'bg-green-100 text-green-800' },
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure iusto fugiat commodi sequi.',
+    date: 'Feb 12, 2020',
+    datetime: '2020-02-12',
+    author: {
+      name: 'Easer Collins',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    readingTime: '11 min',
+  },
+]
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
   
   export default function BlogList() {
     return (
-      <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
-              Learn how to grow your business with our expert advice.
+      <div className="bg-white px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
+        <div className="relative mx-auto lg:mx-12 max-w-lg divide-y-2 divide-gray-200 lg:max-w-full">
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Recent publications</h2>
+            <p className="mt-3 text-xl text-gray-500 sm:mt-4">
+              Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus
+              arcu.
             </p>
           </div>
-          <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div className="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
             {posts.map((post) => (
-              <article key={post.id} className="flex max-w-xl flex-col items-start justify-between">
-                <div className="flex items-center gap-x-4 text-xs">
-                  <time dateTime={post.datetime} className="text-gray-500">
-                    {post.date}
-                  </time>
-                  <a
-                    href={post.category.href}
-                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                  >
-                    {post.category.title}
+              <div key={post.title}>
+                <div>
+                  <a href={post.category.href} className="inline-block">
+                    <span
+                      className={classNames(
+                        post.category.color,
+                        'inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium'
+                      )}
+                    >
+                      {post.category.name}
+                    </span>
                   </a>
                 </div>
-                <div className="group relative">
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    <a href={post.href}>
-                      <span className="absolute inset-0" />
-                      {post.title}
+                <a href={post.href} className="mt-4 block">
+                  <p className="text-xl font-semibold text-gray-900">{post.title}</p>
+                  <p className="mt-3 text-base text-gray-500">{post.description}</p>
+                </a>
+                <div className="mt-6 flex items-center">
+                  <div className="flex-shrink-0">
+                    <a href={post.author.href}>
+                      <span className="sr-only">{post.author.name}</span>
+                      <img className="h-10 w-10 rounded-full" src={post.author.imageUrl} alt="" />
                     </a>
-                  </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
-                </div>
-                <div className="relative mt-8 flex items-center gap-x-4">
-                  <img alt="" src={post.author.imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
-                  <div className="text-sm leading-6">
-                    <p className="font-semibold text-gray-900">
-                      <a href={post.author.href}>
-                        <span className="absolute inset-0" />
-                        {post.author.name}
-                      </a>
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-sm font-medium text-gray-900">
+                      <a href={post.author.href}>{post.author.name}</a>
                     </p>
-                    <p className="text-gray-600">{post.author.role}</p>
+                    <div className="flex space-x-1 text-sm text-gray-500">
+                      <time dateTime={post.datetime}>{post.date}</time>
+                      <span aria-hidden="true">&middot;</span>
+                      <span>{post.readingTime} read</span>
+                    </div>
                   </div>
                 </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>

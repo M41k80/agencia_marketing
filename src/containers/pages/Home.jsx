@@ -8,8 +8,12 @@ import Features from "components/home/Features";
 import Cta from "components/home/Cta";
 import LogoCloud from "components/home/Logocloud";
 import BlogList from "components/home/BlogList";
+import { useEffect } from "react";
 
 function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     return (
         <Layout>
             <Navbar />

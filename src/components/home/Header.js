@@ -8,9 +8,9 @@ function Header() {
 
 
     return (
-        <section className="text-gray-800">
+        <section className="text-gray-800 home">
         <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
-            <h1 className="text-4xl font-bold leading-none sm:text-5xl">Agency for 
+            <h1 className="text-4xl font-bold leading-none pb-40 sm:text-7xl">Agency for 
             <span> </span>
             <div className='inline-flex' style={{ color: '#05BBEB', fontWeight: 'bold'}}>
             <Typewriter
