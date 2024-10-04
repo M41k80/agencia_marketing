@@ -10,6 +10,8 @@ import LogoCloud from "components/home/Logocloud";
 import BlogList from "components/home/BlogList";
 import { useEffect } from "react";
 
+
+
 function Home() {
     useEffect(() => {
         window.scrollTo(0, 0);
